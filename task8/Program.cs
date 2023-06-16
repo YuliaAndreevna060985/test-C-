@@ -2,10 +2,31 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-Console.WriteLine(«Введите число N»);
-int n = int.Parse(Console.ReadLine());
-for(int i=1;i<=n;i++)
-{
-if (i % 2 == 0)
-Console.Write(i + ",");
-}    
+int i = 1;
+            bool not = true;
+
+            Console.WriteLine("Введите число:");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Чётные числа от 1 до " + num);
+            while (i <= num)
+            {
+                if (i % 2 != 1)
+                {
+                    Console.Write(i + ", ");
+                    not = false;
+                }
+                i++;
+            }
+
+            if (not)
+            {
+                Console.WriteLine("Нет чётных чисел!");
+            }
+            break;
+
+        default:
+            begin = false;
+            break;
+    }
+}
